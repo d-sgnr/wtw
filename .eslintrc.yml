@@ -5,7 +5,7 @@ env:
   jest: true
   node: true
 
-extends: ['htmlacademy/es6', 'plugin:react/recommended']
+extends: ["airbnb", "prettier", "plugin:node/recommended"]
 
 parserOptions:
   ecmaFeatures:
@@ -13,8 +13,18 @@ parserOptions:
   ecmaVersion: 6
   sourceType: module
 
-plugins: ['react']
+plugins: ["prettier"]
 
 settings:
   react:
-    version: '16'
+    version: "16"
+
+rules:
+  prettier/prettier: "error"
+  react/jsx-filename-extension: [0]
+  no-unused-vars: "warn",
+  no-console: "off",
+  func-names: "off",
+  no-process-exit: "off",
+  object-shorthand: "off",
+  class-methods-use-this: "off"
